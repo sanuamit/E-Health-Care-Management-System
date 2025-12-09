@@ -1,0 +1,52 @@
+==============================
+ E-HEALTH CARE PROJECT COMMANDS
+==============================
+
+1. CREATE PROJECT FOLDERS
+-------------------------
+mkdir EHealthProject
+cd EHealthProject
+mkdir src
+mkdir src\models
+mkdir src\services
+mkdir out
+
+
+2. CREATE ALL JAVA FILES
+-------------------------
+Create the following files inside folders:
+
+src\Main.java
+src\models\Patient.java
+src\models\Doctor.java
+src\models\Appointment.java
+src\services\PatientService.java
+src\services\DoctorService.java
+src\services\AppointmentService.java
+
+
+3. COMPILE ALL JAVA FILES
+--------------------------
+javac -d out (Get-ChildItem -Recurse -Filter *.java).FullName
+
+
+4. RUN THE APPLICATION
+-----------------------
+java -cp out Main
+
+
+5. CLEAN (DELETE COMPILED .class FILES)
+----------------------------------------
+Remove-Item -Recurse -Force out
+mkdir out
+
+
+6. RECOMPILE AFTER CHANGES
+---------------------------
+javac -d out (Get-ChildItem -Recurse -Filter *.java).FullName
+
+
+7. RUN AGAIN
+-------------
+java -cp out Main
+
